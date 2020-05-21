@@ -512,3 +512,44 @@ try{
 
 Promise.reject('not success').then(resp=> console.log(resp))
 .catch(error=> console.log('got it'));
+
+
+## Section 2 roadmap and JS foundation
+
+### ECMAScript engine
+#### what is JS engine ? ok
+
+>An ECMAScript engine is a program that executes source code written in a version of the ECMAScript language standard, for example, JavaScript.
+[List_of_ECMAScript_engines](https://en.wikipedia.org/wiki/List_of_ECMAScript_engines)
+
+in one word,a program run js code.
+
+one of the famous JS engine: V8, created by Google, used in chrome, node.js.
+
+
+#### Behind the hood of JS engine 
+
+
+#### Intepreter vs compiler
+some info:
+Babel is a Javascript compiler that takes your modern JS code and returns  browser compatible JS (older JS code).
+Typescript is a superset of Javascript that compiles down to Javascript.
+
+
+## Section 13 data structure
+>https://en.wikipedia.org/wiki/List_of_data_structures
+https://coggle.it/diagram/W5E5tqYlrXvFJPsq/t/master-the-interview-click-here-for-course-link
+
+
+#### what is data structure
+just container
+
+which code is best?
+Readable Memory Speed
+Big O
+Memory = space complixity
+Speed = time complicity
+
+#### How computer works in detail?
+
+
