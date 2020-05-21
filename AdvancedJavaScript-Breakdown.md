@@ -1,7 +1,6 @@
-Javascript
-
-* 		Javascript Engine 
-* 		Javascript Runtime 
+## Javascript
+* 		Javascript Engine
+* 		Javascript Runtime
 * 		Interpreter, Compiler, JIT Compiler 
 * 		Writing Optimized Code 
 * 		Call Stack + Memory Heap 
