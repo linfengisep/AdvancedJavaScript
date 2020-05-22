@@ -54,21 +54,125 @@
 https://www.udemy.com/course/advanced-javascript-concepts/learn/lecture/13512858#overview
 
 
-1.List of ECMAScript engine, one of it is V8
 
-2.js is interpreted language? It depends on implementation.
-Babel is a Javascript compiler that takes your modern JS code and returns  browser compatible JS (older JS code).
-Typescript is a superset of Javascript that compiles down to Javascript.
+# Second time Summary Part
+## Section 1-2-3 roadmap and JS foundation stop at 2-14
 
+### ECMAScript engine
+#### what is JS engine ? ok
 
-3why JIT
+>An ECMAScript engine is a program that executes source code written in a version of the ECMAScript language standard, for example, JavaScript.
+[List_of_ECMAScript_engines](https://en.wikipedia.org/wiki/List_of_ECMAScript_engines)
+
+in one word,a program run js code.
+
+one of the famous JS engine: V8, created by Google, used in chrome, node.js.
+
+#### Intepreter vs compiler
+some info:
+Babel is a Javascript compiler that takes your modern JS code and returns  browser compatible JS (older JS code).
+Typescript is a superset of Javascript that compiles down to Javascript.
+
+#### Behind the hood of JS engine 
+
+#### why JIT 2-11
 Interpreter: start fast, but no optimisation, become slow when volume increase
 compiler: need time to start,faster event when the volume increase
-
 
 How to combien the advantage of both world, interpreter and compiler?
 JIT: just in time, begin by interpreter and using compiler to optimiser the code at the same time
 
+like the picture: interpreter start fast, profiler and compiler optimizing the code.
+
+#### Is Javascript an interpreted language?
+it depends, on the implementation,
+at the beginning, it was interpreted by SpiderMonkey engine to bytecode, that engine enable to run inside our browser.
+now, we also have compiler.
+
+#### how to write js optimization code? 2-13
+avoid using:eval(),arguments,with, for in, delete.
+
+V8 optimization hidden classes and inline caching
+hidden classes:
+problem before -> Most Javascript interpreters use dictionary-like objects (hash function based) to store the location of object property values in memory. This structure makes retrieving the value of a property in Javascript more computationally expensive than it would be in a non-dynamic programming language like Java.
+V8 add hidden classes to optimize the retrievation.
+
+inline caching:inline caching relies upon the observation that repeated calls to the same method tend to occur on the same type of object.
+
+more detail
+hidden classes:
+https://richardartoul.github.io/jekyll/update/2015/04/26/hidden-classes.html
+arguments article: 
+https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments
+
+conclusion:
+
+## Section 4 
+
+## Section 5 Closures and prototypal inheritence
+
+### Function
+#### function is special object
+three ways to invoke a function
+() always the symbole to invoke a function
+
+function have call(), apply(), bind() methods automatically.
+
+fun.name
+fun.someProperty = 'yo';
+
+#### function is first class citizens in JS
+assign function to a variable
+pass function as argument to other function
+return function in function.
+
+
+### Array
+
+### Object
+
+
+Function, Array, Object
+three way to invoke function
+fourth one.with Function constructor
+
+function are object
+
+.call() , apply(), .bind()
+
+
+## Section 6 
+
+## Section 7 
+
+## Section 8 
+
+## Section 9 
+
+## Section 10 
+
+## Section 11
+
+
+# Bonus €€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€
+
+## Section 13 data structure
+>https://en.wikipedia.org/wiki/List_of_data_structures
+https://coggle.it/diagram/W5E5tqYlrXvFJPsq/t/master-the-interview-click-here-for-course-link
+
+
+#### what is data structure
+just container
+
+which code is best?
+Readable Memory Speed
+Big O
+Memory = space complixity
+Speed = time complicity
+
+
+
+# First time trace $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 4.call stack vs memory heap
 Memory heap store the variable in allocated area
@@ -512,44 +616,4 @@ try{
 
 Promise.reject('not success').then(resp=> console.log(resp))
 .catch(error=> console.log('got it'));
-
-
-## Section 2 roadmap and JS foundation
-
-### ECMAScript engine
-#### what is JS engine ? ok
-
->An ECMAScript engine is a program that executes source code written in a version of the ECMAScript language standard, for example, JavaScript.
-[List_of_ECMAScript_engines](https://en.wikipedia.org/wiki/List_of_ECMAScript_engines)
-
-in one word,a program run js code.
-
-one of the famous JS engine: V8, created by Google, used in chrome, node.js.
-
-
-#### Behind the hood of JS engine 
-
-
-#### Intepreter vs compiler
-some info:
-Babel is a Javascript compiler that takes your modern JS code and returns  browser compatible JS (older JS code).
-Typescript is a superset of Javascript that compiles down to Javascript.
-
-
-## Section 13 data structure
->https://en.wikipedia.org/wiki/List_of_data_structures
-https://coggle.it/diagram/W5E5tqYlrXvFJPsq/t/master-the-interview-click-here-for-course-link
-
-
-#### what is data structure
-just container
-
-which code is best?
-Readable Memory Speed
-Big O
-Memory = space complixity
-Speed = time complicity
-
-#### How computer works in detail?
-
 

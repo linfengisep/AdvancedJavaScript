@@ -1,17 +1,20 @@
 
 # Roadmap to senior JavaScript Developper
 
+[road map link](https://coggle.it/diagram/XE3ZoVj-rtA5hcxj/t/advanced-javascript)
+
 ## timeline
 first investment
 01/05/2020:10/05/2020 -> briefly going through
 
 second investment -> goal is to summary
-21/05/2020-> foundation, section 1,2,3
+21/05/2020-> foundation, section 2-12
 
 
 
 ## plan d'action
-when finish the summary of one section, mark it ok, then move to next one.
+when finish the summary of one section, mark it ok
+coding + theory
 
 
 ## Goal
