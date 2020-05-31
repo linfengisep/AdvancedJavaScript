@@ -56,7 +56,8 @@ https://www.udemy.com/course/advanced-javascript-concepts/learn/lecture/13512858
 
 
 # Second time Summary Part
-## Section 1-2-3 roadmap and JS foundation stop at 2-14
+## Section 1-2-3 next 2-15
+## Section 5 next 5-74
 
 ### ECMAScript engine
 #### what is JS engine ? ok
@@ -125,11 +126,22 @@ fun.someProperty = 'yo';
 assign function to a variable
 pass function as argument to other function
 return function in function.
-
-
 ### Array
-
 ### Object
+
+### HOF:high order function
+definition: function which can take another function as argument or return another function is called HOF.
+advantage:subcontract sub reponsiblity to it, instead of we define the data, we define what to do with the data all by ourselves.
+
+take example in hof.js,
+
+### Closures
+benefit:
+1.lexical scope.
+created lexical scope, make the inner function could access the outside resources;
+2.memory efficiency
+3.encapsulation
+
 
 
 Function, Array, Object
