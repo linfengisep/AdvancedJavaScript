@@ -54,3 +54,35 @@ function heavyOperation(index){
 
 
 //***************** encapsulation
+
+
+//exercise;
+function fun(){
+  const arr = [1,2,3,4];
+  //problem
+  for(var i=0; i<arr.length; i++){
+    setTimeout(function(){
+      return console.log(arr[i]);
+    },4000);
+  }
+
+  //let allow to use block scope;
+  for(let i=0; i<arr.length; i++){
+    setTimeout(function(){
+      return console.log(arr[i]);
+    },4000);
+  }
+
+  //pass the argument to IIEF
+  for(let i=0; i<arr.length; i++){
+    (function(param){
+        setTimeout(function(){
+          return console.log('value: '+arr[param]);
+        },4000);
+      }
+    )(i);//here pass i;
+  }
+}
+
+
+
