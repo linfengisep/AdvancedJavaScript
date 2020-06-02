@@ -58,7 +58,7 @@ https://www.udemy.com/course/advanced-javascript-concepts/learn/lecture/13512858
 # Second time Summary Part
 ## Section 1-2-3 next 2-15
 ## Section 5 closure and prototype inheritance finished
-
+## Section 6 OOP 5-95
 ### ECMAScript engine
 #### what is JS engine ? ok
 
@@ -106,7 +106,6 @@ https://richardartoul.github.io/jekyll/update/2015/04/26/hidden-classes.html
 arguments article: 
 https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments
 
-conclusion:
 
 ## Section 4 
 
@@ -148,7 +147,19 @@ only function has the prototype property
 3.go up prototype chain by __proto__, and the end of prototype chain is null;
 
 
-## Section 6 
+## Section 6 OOP
+### ways to create object?
+1.using symbole directly let person = {name:'li'};
+2.Object.create(car), using car like prototype, and create an object.
+3.using constructor function
+4.using Function
+const Solder = new Function('name','weapon','this.name=name;this.weapon = weapon');
+5.class
+class Car{
+
+}
+
+
 
 ## Section 7 
 
