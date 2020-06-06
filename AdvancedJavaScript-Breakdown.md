@@ -58,7 +58,9 @@ https://www.udemy.com/course/advanced-javascript-concepts/learn/lecture/13512858
 # Second time Summary Part
 ## Section 1-2-3 next 2-15
 ## Section 5 closure and prototype inheritance finished
-## Section 6 OOP 5-95
+## Section 6 OOP ok
+## Section 7 FP ok
+
 ### ECMAScript engine
 #### what is JS engine ? ok
 
@@ -105,6 +107,9 @@ hidden classes:
 https://richardartoul.github.io/jekyll/update/2015/04/26/hidden-classes.html
 arguments article: 
 https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments
+
+#### WebAssembly
+why?
 
 
 ## Section 4 
@@ -155,13 +160,25 @@ only function has the prototype property
 4.using Function
 const Solder = new Function('name','weapon','this.name=name;this.weapon = weapon');
 5.class
-class Car{
-
-}
+class Car{}
 
 
 
-## Section 7 
+## Section 7 FP
+HOF(higher order function)
+function which will return other function.
+
+Closure
+advantage:memory efficient and encapsulation
+
+Curry
+one argument at a time
+
+Partial application
+first one argument, then rest of argument
+
+Caching, in javascript, could take advantage of closure in order not to pollute the global environement
+
 
 ## Section 8 
 
@@ -359,13 +376,6 @@ function closePopin(){
 closePopin.name='login popin';
 
 
-17.HOF(higher order function)
-function which will return other function.
-
-18.Closure
-advantage:memory efficient and encapsulation
-
-
 19.inhereitance
 var dragon = {
     power:10,
@@ -397,31 +407,6 @@ humain.isPrototypeOf(lee)-> true;
 
 let solder = new Solder();
 
-
-20.FP:functional programming-> good at being executing at distributed system
-imperative programming vs declarative programming
-imperative programming:show precise intructions to let machine know what to do.
-declarative programming:give a rough intructions.
-
-for example iterating array.
-
-function multiplyArrByTwoImp(arr){
-    let newArr = [];
-    for(let i=0;i<arr.length;i++){//show precise instruction;
-        newArr.push(i*2);
-    }
-    return newArr;
-}
-vs
-function multiplyArrByTwoDecl(arr){
-    let newArr = [];
-    arr.forEach(item => newArr.push(item*2));//give raw instruction
-    return newArr;
-}
-
-humain prefer give declarative instructions: Peter, give me some water.
-machine prefer execute imperative instructions: like, Peter,
-go to the kitchen, grab a cup,fill some water, bring the cup back to me.
 
 pure Function-> no side effect
 input-> output, we can expect the same result from the function given the same input.
@@ -464,62 +449,6 @@ function addFive(){
 
 addFive(4);
 addFive(4);
-
-25.compose/Pipe
-compose(f,g);
-pipe(g,f);
-
-const multiplyFive = (number)=> number*5;
-const absIt = (number)=> Math.abs(number);
-const compose = (f,g)=> data => g(f(data));
-const multiplyFiveAndAbs = compose(multiplyFive,absIt)(-4)
-
-26.FP:arity
-the number of function it takes;
-one or two, reuse purpose
-
-Execise:
-//Amazon shopping-> implement a cart feature;
-//1. add items to cart
-//2. add 3% tax to items in cart
-//3. buy items:cart - purchase
-//4. empty cart
-
-//functional programmaing,
-
-
-
-const user ={
-  name:'lee',
-  active:true,
-  cart:[],
-  purchase:[],
-}
-const pipeReducer = (g,f) => (...arg)=> f(g(...arg));//from left to right, or from right to left?
-purchaseItem(
-  addItemToCart,
-  applyTax,
-  buyItem,
-  emptyCart)(user,{product:'laptop',price:300});
-
-function purchaseItem(...fns){
-  return fns.reduce(pipeReducer);
-}
-function addItemToCart(user,item){ const itemArr = [].concat(item);
-  return Object.assign({},user,{cart:itemArr});
-}
-function applyTax(user){
-  const {cart}=user;
-  const taxRate = 1.3;
-  const updatedCart = cart.map(item =>{
-    return {
-      product: item.product,
-      price: item.price * taxRate};
-    });
-  return Object.assign({},user,{cart:updatedCart});
-}
-function buyItem(user){ return Object.assign({},user,{purchase:user.cart});}
-function emptyCart(user){ return Object.assign({},user,{cart:[]});}
 
 
 27 Promise-> async

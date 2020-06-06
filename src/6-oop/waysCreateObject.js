@@ -1,4 +1,4 @@
-// 1.using symbole directly let person = {name:'li'};
+// 1.using symbole directly let person = {name:'li'}; implicit binding, binding property to object. 
 const car = {
     wheel:4,
     speed:"fase",
