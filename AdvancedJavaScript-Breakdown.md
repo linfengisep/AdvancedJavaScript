@@ -60,6 +60,7 @@ https://www.udemy.com/course/advanced-javascript-concepts/learn/lecture/13512858
 ## Section 5 closure and prototype inheritance finished
 ## Section 6 OOP ok
 ## Section 7 FP ok
+## Section 9 Async next 134
 
 ### ECMAScript engine
 #### what is JS engine ? ok
@@ -182,7 +183,11 @@ Caching, in javascript, could take advantage of closure in order not to pollute 
 
 ## Section 8 
 
-## Section 9 
+## Section 9  Async
+Promise serve as callback, but powerful,
+Creating a promise,
+Error catch handling,
+Combine all promise,
 
 ## Section 10 
 
