@@ -21,7 +21,7 @@
 * 		Context vs Scope
 * 		Static vs Dynamically Typed
 * 		Primitive Types
-* 		Pass by Reference vs Pass by Value 
+* 		Pass by Reference vs Pass by Value
 * 		Type Coercion
 * 		Arrays, Functions, Objects
 * 		Closures
@@ -60,7 +60,11 @@ https://www.udemy.com/course/advanced-javascript-concepts/learn/lecture/13512858
 ## Section 5 closure and prototype inheritance finished
 ## Section 6 OOP ok
 ## Section 7 FP ok
-## Section 9 Async next 134
+## Section 9 Async ok
+## Section 10 modules ok
+## Section 11 error handling: not begin yet
+
+## Section 13 data structure
 
 ### ECMAScript engine
 #### what is JS engine ? ok

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Battle field</title>
+</head>
+<body>
+<h1>Battle begins</h1>
+
+<p id="result">who wins?</p>
+
+<script>
+    var whiteWalder = 'Ghost leader';
+    var johnSnow = 'Bastard';
+    var fightModule = (function(){
+        function fight(gardien,villain){
+            var gardienPower = Math.floor(Math.random()*gardien.length);
+            var villainDestroyer = Math.floor(Math.random()*villain.length);
+            return  `${gardienPower > villainDestroyer? gardien:villain} wins the battle`;
+        }
+        return {fight:fight};
+    })()//here to pass in the param;
+
+    document.getElementById("result").innerHTML = fightModule.fight(whiteWalder,johnSnow);
+</script>
+</body>
+</html>
